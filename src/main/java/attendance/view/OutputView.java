@@ -18,4 +18,8 @@ public class OutputView {
     public void printAttendanceResult(String timeAttendance) {
         System.out.printf("%d월 %d일 %s %s\n",currentDateTime.getMonthValue(), currentDateTime.getDayOfMonth(),dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN),timeAttendance);
     }
+
+    public void printModifyResult(String s) {
+        System.out.println(s);
+    }
 }

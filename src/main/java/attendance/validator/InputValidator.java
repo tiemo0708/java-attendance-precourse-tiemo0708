@@ -32,7 +32,7 @@ public class InputValidator {
         LocalDateTime currentDateTime = DateTimes.now();
         DayOfWeek dayOfWeek = currentDateTime.getDayOfWeek();
         if(currentDateTime.getDayOfWeek().equals(DayOfWeek.SUNDAY)||currentDateTime.getDayOfWeek().equals(DayOfWeek.SATURDAY)){
-           // throw new IllegalArgumentException("[ERROR] "+currentDateTime.getMonthValue()+"월 "+currentDateTime.getDayOfMonth()+"일 "+dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN)+"은 등교일이 아닙니다.");
+            throw new IllegalArgumentException("[ERROR] "+currentDateTime.getMonthValue()+"월 "+currentDateTime.getDayOfMonth()+"일 "+dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN)+"은 등교일이 아닙니다.");
         }
     }
 }

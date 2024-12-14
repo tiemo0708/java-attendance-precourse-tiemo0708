@@ -1,8 +1,8 @@
 package attendance.model;
 
 public class Attendance {
-    private final String nickname;
-    private  final String datetime;
+    private String nickname;
+    private String datetime;
 
     public Attendance(String nickname, String datetime) {
         this.nickname = nickname;
@@ -15,5 +15,13 @@ public class Attendance {
 
     public String getDatetime() {
         return datetime;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void setDatetime(String datetime) {
+        this.datetime = datetime;
     }
 }
