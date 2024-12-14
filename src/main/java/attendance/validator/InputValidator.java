@@ -23,7 +23,7 @@ public class InputValidator {
     }
 
     public void validateTime(String time) {
-        if (!time.matches("^1[0~9]|2[0~4]|0[0~9]:60|[0~5][0~9]")){
+        if (!time.matches("^(0[0-9]|1[0-9]|2[0-3]):(0[1-9]|[0-5][0-9])$")){
             throw new IllegalArgumentException("[ERROR] 잘못된 형식을 입력하였습니다.");
         }
     }
@@ -32,7 +32,7 @@ public class InputValidator {
         LocalDateTime currentDateTime = DateTimes.now();
         DayOfWeek dayOfWeek = currentDateTime.getDayOfWeek();
         if(currentDateTime.getDayOfWeek().equals(DayOfWeek.SUNDAY)||currentDateTime.getDayOfWeek().equals(DayOfWeek.SATURDAY)){
-            throw new IllegalArgumentException("[ERROR] "+currentDateTime.getMonthValue()+"월 "+currentDateTime.getDayOfMonth()+"일 "+dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN)+"은 등교일이 아닙니다.");
+           // throw new IllegalArgumentException("[ERROR] "+currentDateTime.getMonthValue()+"월 "+currentDateTime.getDayOfMonth()+"일 "+dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN)+"은 등교일이 아닙니다.");
         }
     }
 }
