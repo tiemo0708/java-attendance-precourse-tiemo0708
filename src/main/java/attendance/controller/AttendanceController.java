@@ -17,6 +17,30 @@ public class AttendanceController {
     }
 
     public void start() {
+       ;
+        checkMenu(inputView.requestMenuChoice());
+
+    }
+
+    private void checkMenu(String menuChoices) {
+        if (menuChoices.equals("1")){
+            checkAttendance();
+        }
+        if (menuChoices.equals("2")){
+
+        }
+        if (menuChoices.equals("3")){
+
+        }
+        if (menuChoices.equals("4")){
+
+        }
+        if (menuChoices.equals("Q")){
+
+        }
+    }
+
+    private void checkAttendance() {
 
     }
 }
